@@ -71,7 +71,6 @@ int main()
                         break;
                 }
                 printf("%d\n", three_add(x, y, z));
->>>>>>> [Feat] Add three_add feature
                 break;
             default:
                 continue;
