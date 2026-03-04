@@ -19,6 +19,10 @@ int minus(int x, int y)
     return x - y;
 }
 
+int mod(int x, int y)
+{
+    return x % y;
+}
 int main()
 {
     int c;
@@ -57,6 +61,18 @@ int main()
                 }
                 printf("%.2\n", divide(x, y));
                 break;
+
+            case 7:
+                printf("please enter x and y: ");
+                (void)scanf("%d %d", &x, &y);
+                if (y == 0) {
+                    printf("can't divided by zero\n");
+                    break;
+                }
+                printf("%d\n", mod(x, y));
+                break;
+
+
             default:
                 continue;
         }
