@@ -9,6 +9,11 @@ int multifly(int x, int y)
     return x * y;
 }
 
+int tree_add(int x, int y, int z)
+{
+    return x + y + z;
+}
+
 double divide(int x, int y)
 {
 	return (double)x / y;
@@ -26,7 +31,7 @@ int main()
 
     while(1)
     {
-        printf("1: plus, 2:minus, 3:multiple, 4:divide\n");
+        printf("1: plus, 2:minus, 3:multiple, 4:divide 5:three add \n");
         (void)scanf("%d", &c);
         switch(c)
         {
@@ -47,15 +52,26 @@ int main()
                 (void)scanf("%d %d", &x, &y);
                 printf("%d\n", multifly(x, y));
                 break;
-                
-            case 4:
-                printf("please enter x and y: ");
-                (void)scanf("%d %d", &x, &y);
+            
+	    case 4:
+		printf("please enter x and y: ");
+		(void)scanf("%d %d", &x, &y);
+		if (y == 0) {
+		    printf("can't divided by zero\n");
+		    break;
+		}
+		printf("%.2\n", divide(x, y));
+		break;
+
+	    case 5:
+		printf("please enter x and y: ");
+                (void)scanf("%d %d %d", &x, &y, &z);
                 if (y == 0) {
-                    printf("can't divided by zero\n");
-                    break;
+                        printf("can't divided by zero\n");
+                        break;
                 }
-                printf("%.2\n", divide(x, y));
+                printf("%d\n", three_add(x, y, z));
+>>>>>>> [Feat] Add three_add feature
                 break;
             default:
                 continue;
