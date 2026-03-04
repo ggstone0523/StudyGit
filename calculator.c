@@ -4,6 +4,10 @@ int plus(int x, int y)
 {
     return x + y;
 }
+int multifly(int x, int y)
+{
+    return x * y;
+}
 
 double divide(int x, int y)
 {
@@ -35,6 +39,11 @@ int main()
 		}
 		printf("%.2\n", divide(x, y));
 		break;
+	    case 3
+		printf("please enter x and y: ");
+		(void)scanf("%d %d", &x, &y);
+                printf("%d\n", multifly(x, y));
+                break;
             default:
                 continue;
         }
