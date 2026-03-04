@@ -28,6 +28,12 @@ int mod(int x, int y)
 {
     return x % y;
 }
+
+int square(int x)
+{
+	return x * x;
+}
+
 int main()
 {
     int c;
@@ -35,7 +41,7 @@ int main()
 
     while(1)
     {
-        printf("1: plus, 2:minus, 3:multiple, 4:divide 5:three add \n");
+        printf("1: plus, 2:minus, 3:multiple, 4:divide, 5:three add, 6:square \n");
         (void)scanf("%d", &c);
         switch(c)
         {
@@ -57,18 +63,18 @@ int main()
                 printf("%d\n", multifly(x, y));
                 break;
             
-	    case 4:
-		printf("please enter x and y: ");
-		(void)scanf("%d %d", &x, &y);
-		if (y == 0) {
-		    printf("can't divided by zero\n");
-		    break;
-		}
-		printf("%.2\n", divide(x, y));
-		break;
+	        case 4:
+		        printf("please enter x and y: ");
+        		(void)scanf("%d %d", &x, &y);
+        		if (y == 0) {
+        		    printf("can't divided by zero\n");
+        		    break;
+        		}
+		        printf("%.2\n", divide(x, y));
+        		break;
 
-	    case 5:
-		printf("please enter x and y: ");
+	        case 5:
+        		printf("please enter x and y: ");
                 (void)scanf("%d %d %d", &x, &y, &z);
                 if (y == 0) {
                         printf("can't divided by zero\n");
@@ -76,6 +82,12 @@ int main()
                 }
                 printf("%d\n", three_add(x, y, z));
                 break;
+
+	        case 6:
+                printf("please enter x: ");
+                (void)scanf("%d", &x);
+		        printf("d\n", square(x));
+        		break;
 
             case 7:
                 printf("please enter x and y: ");
