@@ -87,7 +87,6 @@ int main()
                 printf("%d\n", mod(x, y));
                 break;
 
-
             default:
                 continue;
         }
