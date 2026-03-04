@@ -11,7 +11,7 @@ int multifly(int x, int y)
 
 double divide(int x, int y)
 {
-	return x / y;
+	return (double)x / y;
 }
 
 int minus(int x, int y)
@@ -57,7 +57,6 @@ int main()
                 }
                 printf("%.2\n", divide(x, y));
                 break;
-
             default:
                 continue;
         }
